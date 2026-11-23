@@ -8,8 +8,8 @@ jobs:
     steps:
         - uses: actions/checkout@v4
         - run: pip install esphome
-        - run: esphome compile esp32-pv18.yaml
+        - run: esphome compile esp32-pv18.yaml -o must.bin
         - uses: actions/upload-artifact@v4
           with:
             name: must-firmware
-            path: .esphome/build/*/.pioenvs/*/firmware.factory.bin
+            path: must.bin
