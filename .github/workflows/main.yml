@@ -9,7 +9,8 @@ jobs:
         - uses: actions/checkout@v4
         - run: pip install esphome
         - run: esphome compile esp32-pv18.yaml
+        - run: cp -r .esphome out
         - uses: actions/upload-artifact@v4
           with:
             name: must-firmware
-            path: .esphome
+            path: out
