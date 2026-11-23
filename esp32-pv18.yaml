@@ -41,7 +41,7 @@ modbus:
   - id: modbus_inverter
     uart_id: uart_inverter
     send_wait_time: 200ms
-    flow_control_pin: GPI04
+    flow_control_pin: GPIO4
 
 modbus_controller:
   - id: must_inverter
